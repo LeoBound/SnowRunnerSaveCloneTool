@@ -89,7 +89,7 @@ if __name__ == '__main__':
         else :
             if steam_profile_id == None:
                 exit()
-            save_dir_path = os.path.join(r'C:\Program Files (x86)\Steam\userdata\88599872\1465360\remote')
+            save_dir_path = os.path.join(f'C:\\Program Files (x86)\\Steam\\userdata\\{steam_profile_id}\\1465360\\remote')
             backup_dir_path = save_dir_path + '_backup'
             os.chdir(save_dir_path)
             user_data_dir_path = save_dir_path
