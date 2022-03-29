@@ -2,6 +2,7 @@ import shutil
 import os
 import re
 import json
+from time import sleep
 
 # Use different save dir
 mode_different_dir = False
@@ -122,6 +123,7 @@ if __name__ == '__main__':
             print('SnowRunner.lnk not found, trying .url...')
 
         try:
+            if not mode_egs: sleep(3) # Wait for the old instance to close - pray GabeN will let us launch it again
             os.system('SnowRunner.url')
         except:
             print('No launcher found, please run SnowRunner manually.')
